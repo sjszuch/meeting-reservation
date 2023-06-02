@@ -1,0 +1,31 @@
+<div class="container">
+  <mat-form-field hintLabel="Max 10 characters">
+
+    <mat-label>Name:</mat-label>
+    <input matInput #input maxlength="10" placeholder="Ex. Jim">
+    <mat-hint align="end">{{input.value.length}}/10</mat-hint>
+
+
+
+
+  </mat-form-field>
+
+<mat-form-field hintLabel="This time, {{ selectedValue }} is available">
+  <mat-select placeholder="Select Time" [(ngModel)]="selectedValue" name="time">
+    <mat-option *ngFor="let time of times" [value]="time.value">
+      {{time.viewValue}}
+    </mat-option>
+  </mat-select>
+
+</mat-form-field>
+
+<div class="slider">
+  <mat-slider min="0" max="3" step=".5" showTickMarks discrete [displayWith]="formatLabel">
+    <input matSliderThumb>
+  </mat-slider>
+  <p>Meeting length?</p>
+</div>
+
+
+</div>
+

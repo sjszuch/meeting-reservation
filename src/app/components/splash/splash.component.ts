@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.component.html',
@@ -33,7 +36,11 @@ export class SplashComponent {
   }
 
 
-  // Dialog
+  // Snackbar
 
+  constructor(private _snackBar: MatSnackBar) {}
 
+  openSnackBar() {
+    this._snackBar.open("Meeting reserved! 🎉", "Okay");
+  }
 }

@@ -7,7 +7,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
 
 
-
 @NgModule({
   declarations: [
 
@@ -20,4 +19,6 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSliderModule
   ]
 })
-export class SplashModule { }
+export class SplashModule {
+
+ }

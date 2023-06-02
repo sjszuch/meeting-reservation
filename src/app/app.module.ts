@@ -16,7 +16,7 @@ import { SplashComponent } from './components/splash/splash.component';
 import { MatSelectModule} from '@angular/material/select';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -40,7 +40,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatSliderModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
 
   ],
   providers: [],

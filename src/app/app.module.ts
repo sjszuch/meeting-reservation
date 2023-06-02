@@ -19,6 +19,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { DetailsComponent } from './components/details/details.component';
 
 
 
@@ -29,6 +30,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     SelectionComponent,
     SplashComponent,
     TopbarComponent,
+    DetailsComponent,
 
 
   ],

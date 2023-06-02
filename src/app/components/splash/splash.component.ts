@@ -32,4 +32,8 @@ export class SplashComponent {
     return `${value}`;
   }
 
+
+  // Dialog
+
+
 }

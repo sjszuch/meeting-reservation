@@ -17,6 +17,9 @@ import { MatSelectModule} from '@angular/material/select';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 
 @NgModule({
@@ -41,7 +44,9 @@ import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
     MatSliderModule,
     MatSelectModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
   providers: [],

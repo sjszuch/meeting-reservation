@@ -1,6 +1,8 @@
 
 <div class="container">
 
+
+  <!-- NAME FIELD -->
   <mat-form-field hintLabel="Max 10 characters">
 
     <mat-label>Name:</mat-label>
@@ -12,7 +14,20 @@
 
   </mat-form-field>
 
-<mat-form-field hintLabel="This time, {{ selectedValue }} is available">
+
+  <!-- DATE FIELD -->
+
+  <mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+
+  <!-- TIME FIELD -->
+<mat-form-field hintLabel="This time is available">
   <mat-select placeholder="Select Time" [(ngModel)]="selectedValue" name="time">
     <mat-option *ngFor="let time of times" [value]="time.value">
       {{time.viewValue}}
@@ -21,6 +36,8 @@
 
 </mat-form-field>
 
+
+<!-- LENGTH SLIDER -->
 <div class="slider">
   <mat-slider min=".5" max="3" step=".5" showTickMarks discrete [displayWith]="formatLabel">
     <input matSliderThumb>

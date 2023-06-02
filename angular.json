@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MaterialTest": {
+    "MeetingReservations": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "MaterialTest:build:production"
+              "browserTarget": "MeetingReservations:build:production"
             },
             "development": {
-              "browserTarget": "MaterialTest:build:development"
+              "browserTarget": "MeetingReservations:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MaterialTest:build"
+            "browserTarget": "MeetingReservations:build"
           }
         },
         "test": {

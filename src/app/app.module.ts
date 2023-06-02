@@ -14,6 +14,9 @@ import { CardComponent } from './components/card/card.component';
 import { SelectionComponent } from './components/selection/selection.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { MatSelectModule} from '@angular/material/select';
+import { TopbarComponent } from './components/topbar/topbar.component';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { MatSelectModule} from '@angular/material/select';
     AppComponent,
     CardComponent,
     SelectionComponent,
-    SplashComponent
+    SplashComponent,
+    TopbarComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,8 @@ import { MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatInputModule,
     MatSliderModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule
 
   ],
   providers: [],

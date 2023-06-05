@@ -1,0 +1,27 @@
+@import '../../allstyles.scss';
+
+
+
+mat-form-field {
+  color: $text;
+}
+
+p {
+  color: $text;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  background-color: darken($color: $background, $amount: 10);
+  width: fit-content;
+  padding: 1.5rem;
+  border-radius: 5px;
+
+  margin: auto;
+}
+

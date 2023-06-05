@@ -27,12 +27,13 @@
   <mat-slider min=".5" max="3" step=".5" showTickMarks discrete [displayWith]="formatLabel">
     <input matSliderThumb>
   </mat-slider>
-  <p>Meeting length?</p>
+  <p>Meeting length? (hrs)</p>
 </div>
 
-<button mat-raised-button>FILTER</button>
+<button mat-raised-button color="primary">FILTER</button>
 
 
 </div>
 
 
+<!-- ngFor room of rooms -> ngIf room = available -> display card with room details-->

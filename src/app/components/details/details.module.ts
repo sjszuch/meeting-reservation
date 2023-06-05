@@ -7,8 +7,7 @@ import { SplashComponent } from '../splash/splash.component';
 
 @NgModule({
   declarations: [
-    CardComponent,
-    SplashComponent
+    CardComponent
   ],
   imports: [
     CommonModule

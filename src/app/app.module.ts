@@ -22,6 +22,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { DetailsComponent } from './components/details/details.component';
 import { StartupComponent } from './components/startup/startup.component';
 import { TimeComponent } from './components/time/time.component';
+import { RoomviewComponent } from './components/roomview/roomview.component';
 
 
 
@@ -35,6 +36,7 @@ import { TimeComponent } from './components/time/time.component';
     DetailsComponent,
     StartupComponent,
     TimeComponent,
+    RoomviewComponent,
 
 
   ],

@@ -1,21 +1,4 @@
-<!-- The name of this component must be changed in the future
-as it is no longer used as the splash screen -->
-
 <div class="container">
-
-
-  <!-- NAME FIELD -->
-  <mat-form-field hintLabel="Max 10 characters">
-
-    <mat-label>Name:</mat-label>
-    <input matInput #input maxlength="10" placeholder="Ex. Jim">
-    <mat-hint align="end">{{input.value.length}}/10</mat-hint>
-
-
-
-
-  </mat-form-field>
-
 
   <!-- DATE FIELD -->
 
@@ -44,12 +27,13 @@ as it is no longer used as the splash screen -->
   <mat-slider min=".5" max="3" step=".5" showTickMarks discrete [displayWith]="formatLabel">
     <input matSliderThumb>
   </mat-slider>
-  <p>Meeting length?</p>
+  <p>Meeting length? (hrs)</p>
 </div>
 
-<button mat-raised-button (click)="openSnackBar()">CONFIRM</button>
+<button mat-raised-button color="primary">FILTER</button>
 
 
 </div>
 
 
+<!-- ngFor room of rooms -> ngIf room = available -> display card with room details-->

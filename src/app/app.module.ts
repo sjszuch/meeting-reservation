@@ -20,6 +20,9 @@ import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { DetailsComponent } from './components/details/details.component';
+import { StartupComponent } from './components/startup/startup.component';
+import { TimeComponent } from './components/time/time.component';
+import { RoomviewComponent } from './components/roomview/roomview.component';
 
 
 
@@ -31,6 +34,9 @@ import { DetailsComponent } from './components/details/details.component';
     SplashComponent,
     TopbarComponent,
     DetailsComponent,
+    StartupComponent,
+    TimeComponent,
+    RoomviewComponent,
 
 
   ],

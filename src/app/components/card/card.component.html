@@ -12,7 +12,7 @@
   <mat-card-actions>
     <!-- Pressing this button shows a calendar- when the date is selected it then shows available times -->
     <div *ngIf="noButtons == null" class="button-row">
-      <button mat-raised-button>View</button>
+      <button mat-raised-button [routerLink]="['/roomview']" routerLinkActive="router-link-active">View</button>
       <button mat-raised-button color="primary"
       [routerLink]="['/details']" routerLinkActive="router-link-active"
       >Reserve</button>

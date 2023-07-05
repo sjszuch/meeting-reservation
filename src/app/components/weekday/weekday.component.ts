@@ -1,11 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, IterableDiffers, IterableDiffer, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-weekday',
   templateUrl: './weekday.component.html',
   styleUrls: ['./weekday.component.scss']
 })
-export class WeekdayComponent {
+export class WeekdayComponent implements OnChanges  {
+
+
 
 
   getRange(limit: number): number[] {
@@ -55,13 +58,10 @@ export class WeekdayComponent {
   // Array of times that are selected
   selectedTimes: string[] = [];
 
-  // Display the value from a child's event emitter to the console
-  logTime(time: string) {
-    console.log(time);
-  }
 
+  // When a time is clicked, displays that value on the console- then adds it to the array of selected times
   addTime($time: string) {
-
+    console.log($time);
     // If the time is already in the array, remove it
     if (this.selectedTimes.includes($time)) {
       this.selectedTimes.splice(this.selectedTimes.indexOf($time), 1);
@@ -70,11 +70,44 @@ export class WeekdayComponent {
       this.selectedTimes.push($time);
     }
 
-  
+
   }
 
+  // Returns the selected times when called- used in the calendar component to add the selected times to the reserved times array
   sendTimes() {
     return this.selectedTimes;
-
   }
+
+  sendRoom() {
+    return this.room;
+  }
+
+  @Output("refresh") refresh: EventEmitter<any> = new EventEmitter();
+
+  ngOnChanges(changes: SimpleChanges) {
+    const change = changes['date'];
+    this.refresh.emit();
+  }
+
+  refreshList(x: any[]) {
+
+
+
+    console.log("From week: " + x)
+
+    this.isabella1Array = x;
+    console.log("List: " + this.isabella1Array);
+
+    // for (let i = 0; i < x.length; i++) {
+    //   this.isabella1Array.push("1");
+    // }
+  }
+
+
+
+
+
+
 }
+
+

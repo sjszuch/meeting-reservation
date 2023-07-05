@@ -28,4 +28,21 @@ export class TimeComponent {
     return `${value}`;
   }
 
+  // Array of rooms called rooms
+
+  rooms = [
+    {value: 'room1', viewValue: 'Room 1'},
+    {value: 'room2', viewValue: 'Room 2'},
+    {value: 'room3', viewValue: 'Room 3'},
+    {value: 'room4', viewValue: 'Room 4'},
+  ]
+
+  // Array of reservations called bookings
+
+  bookings = [
+    {date: ""},
+    {value: 'booking2', viewValue: 'Booking 2'},
+    {value: 'booking3', viewValue: 'Booking 3'},
+  ]
+
 }

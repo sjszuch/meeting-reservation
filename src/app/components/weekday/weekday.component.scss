@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+
+  max-width: 100%;
+}
+
+p {
+  color: white;
+}
+
+.timegroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.slots {
+  display: flex;
+}

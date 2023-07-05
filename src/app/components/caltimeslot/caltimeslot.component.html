@@ -1,0 +1,10 @@
+<div class="container">
+  <!-- A blue button that turns orange when clicked on -->
+  <button
+    class="btn btn-primary"
+    (click)="toggleButton()"
+    [ngClass]="{ 'btn-primary': !isClicked, 'btn-warning': isClicked }"
+  >
+    {{ marker }}
+  </button>
+</div>

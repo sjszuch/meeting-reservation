@@ -1,39 +1,50 @@
 <div class="container">
-
   <!-- DATE FIELD -->
 
   <mat-form-field>
     <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker">
+    <input matInput [matDatepicker]="picker" />
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
-
   <!-- TIME FIELD -->
-<mat-form-field hintLabel="This time is available">
-  <mat-select placeholder="Select Time" [(ngModel)]="selectedValue" name="time">
-    <mat-option *ngFor="let time of times" [value]="time.value">
-      {{time.viewValue}}
-    </mat-option>
-  </mat-select>
+  <mat-form-field hintLabel="This time is available">
+    <mat-select
+      placeholder="Select Time"
+      [(ngModel)]="selectedValue"
+      name="time"
+    >
+      <mat-option *ngFor="let time of times" [value]="time.value">
+        {{ time.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
-</mat-form-field>
+  <!-- LENGTH SLIDER -->
+  <div class="slider">
+    <mat-slider
+      min=".5"
+      max="3"
+      step=".5"
+      showTickMarks
+      discrete
+      [displayWith]="formatLabel"
+    >
+      <input matSliderThumb />
+    </mat-slider>
+    <p>Meeting length? (hrs)</p>
+  </div>
 
-
-<!-- LENGTH SLIDER -->
-<div class="slider">
-  <mat-slider min=".5" max="3" step=".5" showTickMarks discrete [displayWith]="formatLabel">
-    <input matSliderThumb>
-  </mat-slider>
-  <p>Meeting length? (hrs)</p>
+  <button mat-raised-button color="primary">FILTER</button>
 </div>
 
-<button mat-raised-button color="primary">FILTER</button>
-
-
-</div>
-
-
-<!-- ngFor room of rooms -> ngIf room = available -> display card with room details-->
+<!-- <div class="room-display">
+ 
+  <div class="" *ngFor="let room of rooms">
+    <div class="display"
+    *ngIf="bookings.includes(room.id)"
+    ></div>
+  </div>
+</div> -->

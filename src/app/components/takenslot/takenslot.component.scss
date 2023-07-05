@@ -1,0 +1,17 @@
+button {
+  width: 1.4rem;
+  height: 2rem;
+  background-color: #c55a4c;
+  color: white;
+
+  border: none;
+  border-right: 1px solid black;
+
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.container {
+  max-width: 100%;
+}

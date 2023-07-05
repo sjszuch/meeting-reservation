@@ -2,54 +2,51 @@
 as it is no longer used as the splash screen -->
 
 <div class="container">
-
-
   <!-- NAME FIELD -->
   <mat-form-field hintLabel="Max 10 characters">
-
     <mat-label>Name:</mat-label>
-    <input matInput #input maxlength="10" placeholder="Ex. Jim">
-    <mat-hint align="end">{{input.value.length}}/10</mat-hint>
-
-
-
-
+    <input
+      matInput
+      #input
+      maxlength="10"
+      placeholder="Ex. Jim"
+      [(ngModel)]="name"
+    />
+    <mat-hint align="end">{{ input.value.length }}/10</mat-hint>
   </mat-form-field>
 
-
   <!-- DATE FIELD -->
-
   <mat-form-field>
     <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="date" />
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
-
   <!-- TIME FIELD -->
-<mat-form-field hintLabel="This time is available">
-  <mat-select placeholder="Select Time" [(ngModel)]="selectedValue" name="time">
-    <mat-option *ngFor="let time of times" [value]="time.value">
-      {{time.viewValue}}
-    </mat-option>
-  </mat-select>
+  <mat-form-field hintLabel="This time is available">
+    <mat-select placeholder="Select Time" [(ngModel)]="startTime" name="time">
+      <mat-option *ngFor="let time of times" [value]="time.value">
+        {{ time.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
-</mat-form-field>
+  <!-- LENGTH SLIDER -->
+  <div class="slider">
+    <mat-slider
+      min=".5"
+      max="3"
+      step=".5"
+      showTickMarks
+      discrete
+      [displayWith]="formatLabel"
+    >
+      <input matSliderThumb [(ngModel)]="length" />
+    </mat-slider>
+    <p>Meeting length?</p>
+  </div>
 
-
-<!-- LENGTH SLIDER -->
-<div class="slider">
-  <mat-slider min=".5" max="3" step=".5" showTickMarks discrete [displayWith]="formatLabel">
-    <input matSliderThumb>
-  </mat-slider>
-  <p>Meeting length?</p>
+  <button mat-raised-button (click)="Submit()">CONFIRM</button>
 </div>
-
-<button mat-raised-button (click)="openSnackBar()">CONFIRM</button>
-
-
-</div>
-
-

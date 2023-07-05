@@ -1,4 +1,4 @@
-@import '../../allstyles.scss';
+@import "../../allstyles.scss";
 
 .container {
   text-align: center;
@@ -6,7 +6,7 @@
 
   align-items: center;
   padding-top: 1rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 img {
@@ -16,5 +16,4 @@ img {
 * {
   color: $text;
   margin: 0;
-
 }

@@ -61,7 +61,7 @@ export class WeekdayComponent implements OnChanges  {
 
   // When a time is clicked, displays that value on the console- then adds it to the array of selected times
   addTime($time: string) {
-    console.log($time);
+
     // If the time is already in the array, remove it
     if (this.selectedTimes.includes($time)) {
       this.selectedTimes.splice(this.selectedTimes.indexOf($time), 1);

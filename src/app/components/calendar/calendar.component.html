@@ -1,4 +1,6 @@
 <div class="holder">
+
+  <!-- If date is null none of this shows- instead it will say "Please select a date" -->
   <div class="container">
     <p>Date: {{date}}</p>
     <p>Isabella 1</p>
@@ -10,13 +12,10 @@
     ></app-weekday>
 
     <p>Isabella 2</p>
-    <app-weekday room="isabella2"
+    <app-weekday room="testIsa2"
     isabella2Array="{{ isabella2 }}"></app-weekday>
 
-    <div class="arrows">
-      <p><--- ---></p>
-    </div>
-
+    <!--  -->
     <div class="buttons">
       <mat-form-field>
         <mat-label>Choose a date</mat-label>
@@ -27,9 +26,7 @@
 
 
       <div class="confirm">
-        <button class="btn btn-primary" (click)="getTimes()">Confirm Selected Times</button>
-        <button (click)="availability()">Confirm date</button>
-
+        <button class="btn btn-primary" (click)="getTimes()">Confirm Meeting</button>
       </div>
     </div>
   </div>
